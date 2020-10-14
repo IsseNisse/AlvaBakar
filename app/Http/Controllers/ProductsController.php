@@ -13,9 +13,10 @@ class ProductsController extends Controller
         $this->middleware('auth');
     }
 
-    public function index(Product $product)
+    public function index()
     {
-        return view('welcome', ['product' => $product]);
+        $products = Product::latest()->get();
+        return view('welcome', ['products' => $products]);
     }
 
     public function show(Product $product) 
