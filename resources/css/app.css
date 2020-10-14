@@ -6,6 +6,6 @@
     height: 50%;
 }
 
-.link-style {
-    text-decoration: none;
+.navbar {
+    border-bottom: 1px solid #E91E63;
 }
