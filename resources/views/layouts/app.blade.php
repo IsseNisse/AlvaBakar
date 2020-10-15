@@ -26,7 +26,7 @@
 
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white box-shadow">
+        <nav class="navbar navbar-expand-md navbar-light bg-white box-shadow ">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     Baka med Alva

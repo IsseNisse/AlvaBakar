@@ -32,4 +32,44 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <form method="POST" action="/">
+            @csrf
+            <label class="label" for="name">Namn: </label>
+            <input 
+                class="input @error('namn') is-danger @enderror" 
+                type="text"
+                name="name"
+                id="name"
+                value="{{ old('name') }}">
+
+                <label class="label" for="phone_number">Telefonnummer: </label>
+            <input 
+                class="input @error('phone_number') is-danger @enderror" 
+                type="text"
+                name="phone_number"
+                id="phone_number"
+                value="{{ old('phone_number') }}">
+
+            <label class="label" for="product">Bakvärk</label>
+            <div class="select is-multiple control">
+                <select 
+                name="products[]"
+                multiple>
+                
+                @foreach ($products as $product)
+                    <option value="{{ $product->id }}">{{ $product->title }}</option>
+                @endforeach
+                @error('product')
+                        <p class="help is-danger">{{ $message }}</p>
+                    @enderror
+            </select>
+
+            <div class="field is-grouped">
+                <div class="control">
+                    <button class="button is-link" type="submit">Submit</button>
+                </div>
+            </div>
+    </form>
+    </div>
 @endsection

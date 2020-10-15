@@ -13,4 +13,9 @@ class Product extends Model
     {
         return route('products.show', $this);
     }
+
+    public function orders()
+    {
+        return $this->belongsToMany(Order::class);
+    }
 }
