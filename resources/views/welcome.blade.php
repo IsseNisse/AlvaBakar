@@ -51,7 +51,7 @@
                 id="phone_number"
                 value="{{ old('phone_number') }}">
 
-            <label class="label" for="product">Bakvärk</label>
+            <label class="label" for="product">Bakverk</label>
             <div class="select is-multiple control">
                 <select 
                 name="products[]"
