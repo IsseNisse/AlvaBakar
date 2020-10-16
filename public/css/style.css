@@ -14,3 +14,22 @@ html {
     /* border-top: 2px solid #e91e63; */
     box-shadow: 0 0.075rem 0.25rem #e91e63;
 }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+.button {
+    background-color: #fff;
+    color: #e91e63;
+    border-style: solid;
+    border-radius: 4px;
+    padding: 10px 20px;
+}

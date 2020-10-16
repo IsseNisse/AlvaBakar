@@ -37,7 +37,7 @@
             @csrf
             <label class="label" for="name">Namn: </label>
             <input 
-                class="input @error('namn') is-danger @enderror" 
+                class="input form-border @error('namn') is-danger @enderror" 
                 type="text"
                 name="name"
                 id="name"
@@ -45,29 +45,32 @@
 
                 <label class="label" for="phone_number">Telefonnummer: </label>
             <input 
-                class="input @error('phone_number') is-danger @enderror" 
+                class="input form-border @error('phone_number') is-danger @enderror" 
                 type="text"
                 name="phone_number"
                 id="phone_number"
                 value="{{ old('phone_number') }}">
-
-            <label class="label" for="product">Bakverk</label>
-            <div class="select is-multiple control">
-                <select 
-                name="products[]"
-                multiple>
-                
+            <ul>
                 @foreach ($products as $product)
-                    <option value="{{ $product->id }}">{{ $product->title }}</option>
+                <li>
+                    <label class="checkbox" for="{{ $product->id }}">
+                        <input 
+                            name="products[]" 
+                            type="checkbox" 
+                            id="{{ $product->id }}" 
+                            value="{{ $product->id }}" >
+                        {{ $product->title }}
+                    </label>
+                </li>
                 @endforeach
+            </ul>
                 @error('product')
                         <p class="help is-danger">{{ $message }}</p>
                     @enderror
-            </select>
 
             <div class="field is-grouped">
                 <div class="control">
-                    <button class="button is-link" type="submit">Submit</button>
+                    <button class="button is-link" type="submit">Beställ</button>
                 </div>
             </div>
     </form>
