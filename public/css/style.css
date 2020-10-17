@@ -18,6 +18,20 @@ html {
 ul {
     list-style-type: none;
     padding: 0;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.card-h1 {
+    margin-bottom: 0;
+}
+
+li {
+    width: 100%;
+}
+
+h1 {
+    font-size: 2rem;
 }
 
 input[type=text] {
